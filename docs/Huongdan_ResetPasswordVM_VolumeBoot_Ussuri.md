@@ -51,7 +51,8 @@ cd /etc/init/; for i in $(ls nova-* | cut -d \. -f 1 | xargs); do sudo service $
 ## 3. Thực hiện Reset password VM
 ### 3.1. Đưa máy ảo về trạng thái Rescue. **Lưu ý:** máy ảo phải đang ở trạng thái Active (Running) trước khi chuyển về Rescue.
 
-Lưu ý: tính năng rescue Volume-backed VM đã hỗ trợ ở bản Ussuri, tuy nhiên phải chỉ định sử dụng API compute 2.87 (mặc định là API version 2). Để chỉ định API version:
+*Lưu ý*: tính năng rescue Volume-backed VM đã hỗ trợ ở bản Ussuri, tuy nhiên phải chỉ định sử dụng API compute 2.87 (mặc định là API version 2). 
+Để chỉ định API version:
  - Khi chạy command line, thêm biến môi trường `OS_COMPUTE_API_VERSION=2.87`
  - Khi chạy API, thêm header  `OpenStack-API-Version: compute 2.87` hoặc `X-OpenStack-Nova-API-Version: 2.87`
 
