@@ -29,7 +29,7 @@ openstack image create --file systemrescue-7.01-amd64.iso --public systemrescuec
 ```
 ### 1.5. Đặt các metadata cho image
 ```sh
-openstack image set --property hw_cdrom_bus=ide --property hw_disk_bus=ide hw_rescue_bus=ide --property hw_rescue_device=cdrom systemrescuecd-amd64
+openstack image set  --property hw_cdrom_bus=ide --property hw_disk_bus=ide --property hw_rescue_bus=ide --property hw_rescue_device=cdrom systemrescuecd-amd64
 ```
 Tham khảo về việc set metadata cho rescue image: https://specs.openstack.org/openstack/nova-specs/specs/ussuri/implemented/virt-rescue-stable-disk-devices.html
 
